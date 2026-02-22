@@ -17,9 +17,7 @@ def extractCSV(root):
         filepath = f"{path}/{file}"
         print(filepath)
         df = pd.read_csv(filepath, sep=",", encoding='mac_roman')
-
-        # 2. Guardar (Escribir a un nuevo CSV)
-        # index=False evita que Pandas cree una columna extra con los números de fila
+        
         toPath = f'{root}/{file}.csv'
         df.to_csv(toPath, index=False)
 
