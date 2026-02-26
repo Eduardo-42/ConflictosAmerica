@@ -15,7 +15,11 @@ def showColumnNames(filepath):
 
     return columnArray
 
+def countryNames(filepath):
+    df = pd.read_csv(filepath, sep=",", encoding='mac_roman')
+    dafCountries = df.countryname.unique()
 
+    return dafCountries
 
 
 
